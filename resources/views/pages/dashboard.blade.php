@@ -1,5 +1,6 @@
 @extends('layouts/backend')
 
+@section('title', 'Dashboard')
 @section('content')
     <x-content-header title="Dashboard"></x-content-header>
 

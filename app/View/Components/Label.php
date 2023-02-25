@@ -11,9 +11,12 @@ class Label extends Component
      *
      * @return void
      */
-    public function __construct()
+    public $label;
+    public $style;
+    public function __construct($label = null, $style = null)
     {
-        //
+        $this->label = $label;
+        $this->style = $style;
     }
 
     /**

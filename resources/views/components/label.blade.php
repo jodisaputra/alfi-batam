@@ -1,1 +1,1 @@
-<label for="{{ $label }}">{{ $slot }}</label>
+<label for="{{ $label }}" @if($style != null) class="{{ $style }}" @endif>{{ $slot }}</label>

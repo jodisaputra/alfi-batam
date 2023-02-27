@@ -65,10 +65,15 @@
             <div class="sidebar">
                 <!-- Sidebar user panel (optional) -->
                 <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-                    <div class="image">
-                        <img src="{{ asset('backend') }}/dist/img/user2-160x160.jpg" class="img-circle elevation-2"
+                    @if (Auth::user()->profile_picture == null)
+                        <div class="image">
+                            <img src="{{ asset('backend') }}/dist/img/user4-128x128.jpg" class="img-circle elevation-2"
+                                alt="User Image">
+                        </div>
+                    @else
+                        <img src="{{ asset('storage/user/' . Auth::user()->profile_picture) }}" class="img-circle elevation-2"
                             alt="User Image">
-                    </div>
+                    @endif
                     <div class="info">
                         <a href="#" class="d-block">{{ Auth::user()->name }}</a>
                     </div>

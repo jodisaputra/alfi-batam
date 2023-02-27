@@ -25,10 +25,10 @@ class ProfileController extends Controller
         ]);
         $user = User::findOrFail(Auth::user()->id)->first();
 
-        if($request->hasFile('profile_picture')){
+        if ($request->hasFile('profile_picture')) {
             $profileValue = $request->profile_picture;
-            $filename = time() . date('Y-m-d').$profileValue->getClientOriginalExtension();
-            $request->profile_picture->storeAs('user',$filename,'public');
+            $filename = time() . date('Y-m-d') . '.' . $profileValue->getClientOriginalExtension();
+            $request->profile_picture->storeAs('user', $filename, 'public');
         }
         $user->update([
             'name' => $request->name,

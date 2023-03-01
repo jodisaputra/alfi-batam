@@ -11,9 +11,22 @@ class BlogCard extends Component
      *
      * @return void
      */
-    public function __construct()
+    public $image;
+    public $category;
+    public $title;
+    public $urlpost;
+    public $urlcategory;
+    public $date;
+    public $user;
+    public function __construct($image, $category, $title, $urlpost, $date, $urlcategory, $user)
     {
-        //
+        $this->image = $image;
+        $this->category = $category;
+        $this->title = $title;
+        $this->urlpost = $urlpost;
+        $this->date = $date;
+        $this->urlcategory = $urlcategory;
+        $this->user = $user;
     }
 
     /**

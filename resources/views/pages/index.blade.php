@@ -54,12 +54,9 @@
                 <h1>Berita</h1>
             </div>
             <div class="row g-4">
-                <x-blog-card></x-blog-card>
-                <x-blog-card></x-blog-card>
-                <x-blog-card></x-blog-card>
-                <x-blog-card></x-blog-card>
-                <x-blog-card></x-blog-card>
-                <x-blog-card></x-blog-card>
+                @foreach ($posts as $post)
+                    <x-blog-card category="{{ $post->category->name }}" title="{{ $post->title }}" image="{{ $post->image }}" urlcategory="{{ $post->slug }}" urlpost="{{ $post->slug }}" date="{{ $post->created_at->diffForHumans() }}" user="{{ $post->user->name }}"></x-blog-card>
+                @endforeach
             </div>
         </div>
     </section>

@@ -2,13 +2,17 @@
 
 namespace App\Http\Controllers\frontend;
 
-use App\Http\Controllers\Controller;
+use App\Models\Post;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class HomeController extends Controller
 {
     public function index()
     {
-        return view('pages.index');
+        $posts = Post::with(['category', 'user'])->where('status', 'published')->get();
+        return view('pages.index', [
+            'posts' => $posts,
+        ]);
     }
 }

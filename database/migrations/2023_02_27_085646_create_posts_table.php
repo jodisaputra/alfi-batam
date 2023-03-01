@@ -21,7 +21,6 @@ return new class extends Migration
             $table->string('image');
             $table->integer('category_id');
             $table->enum('status', ['published', 'draft']);
-            $table->dateTime('post_date');
             $table->integer('user_id');
             $table->timestamps();
         });

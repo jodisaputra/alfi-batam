@@ -8,6 +8,7 @@ use App\Http\Controllers\CheckSlugController;
 use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Backend\PostController;
+use App\Http\Controllers\CKEditorController;
 
 Route::get('/', [\App\Http\Controllers\frontend\HomeController::class, 'index']);
 Route::get('/login', function () {
@@ -49,3 +50,5 @@ Route::get('/check_slug_category', [CheckSlugController::class, 'check_slug_cate
 Route::get('/check_slug_post', [CheckSlugController::class, 'check_slug_post'])->name('check_slug_post');
 
 //end check slug group
+
+Route::post('image-upload', [CKEditorController::class, 'storeImage'])->name('image.upload');

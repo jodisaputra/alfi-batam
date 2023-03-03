@@ -11,6 +11,7 @@ use App\Http\Controllers\Frontend\PageController as PageControllerFrontend;
 use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Backend\PageController as PageControllerBackend;
+use App\Http\Controllers\Backend\TemplateController;
 
 Route::get('/', [\App\Http\Controllers\frontend\HomeController::class, 'index'])->name('frontend.index');
 Route::get('/login', function () {
@@ -45,6 +46,7 @@ Route::prefix('admin')->group(function () {
         Route::resource('categories', CategoryController::class);
         Route::resource('posts', PostController::class);
         Route::resource('pages', PageControllerBackend::class);
+        Route::resource('templates', TemplateController::class);
     });
 });
 

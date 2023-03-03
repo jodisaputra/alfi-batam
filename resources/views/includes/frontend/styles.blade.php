@@ -8,7 +8,7 @@
 
 <!-- Plugins CSS -->
 <link rel="stylesheet" type="text/css" href="{{ asset('frontend') }}/assets/vendor/font-awesome/css/all.min.css">
-<link rel="stylesheet" type="text/css" href="{{ asset('frontend') }}/assets/vendor/bootstrap-icons/bootstrap-icons.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 <link rel="stylesheet" type="text/css" href="{{ asset('frontend') }}/assets/vendor/tiny-slider/tiny-slider.css">
 
 <!-- Theme CSS -->

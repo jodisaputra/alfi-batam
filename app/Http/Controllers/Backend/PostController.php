@@ -159,7 +159,9 @@ class PostController extends Controller
     public function destroy($id)
     {
         $post = Post::find($id);
-        Storage::delete('public/post/'. $post->image);
+        if(file_exists(public_path('storage/post/' . $post->image))) {
+            unlink(public_path('storage/post/'. $post->image));
+        }
         $post->delete();
 
         Alert::toast('Data deleted successfully', 'success');

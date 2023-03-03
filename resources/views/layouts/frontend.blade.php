@@ -453,7 +453,7 @@
         @yield('content')
     </main>
 
-    <footer class="pb-5">
+    <footer class="pt-5 mt-5">
         <div class="container">
             <div class="row pt-5">
                 <div class="col-lg-7 mx-auto text-center">
@@ -462,19 +462,6 @@
                         alt="logo">
                     <img class="dark-mode-item mx-auto" src="{{ asset('frontend') }}/assets/images/logo-light.svg"
                         alt="logo">
-                    <p class="mt-3">The next-generation blog, news, and magazine theme for you to start sharing your
-                        stories today! This Bootstrap 5 based theme is ideal for all types of sites that deliver the
-                        news.</p>
-                    <!-- Links -->
-                    <ul class="nav text-center text-sm-end justify-content-center justify-content-center mt-3 mt-md-0">
-                        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Terms</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Privacy</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Career<span
-                                    class="badge text-bg-danger ms-2">2 Job</span></a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Contact us</a></li>
-                        <li class="nav-item"><a class="nav-link pe-0" href="#">Cookies</a></li>
-                    </ul>
                     <div class="mt-2">©2023 <a href="https://www.webestica.com/" class="text-reset btn-link"
                             target="_blank">Webestica</a>. All rights reserved </div>
                 </div>

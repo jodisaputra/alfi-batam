@@ -53,11 +53,17 @@
             <div class="row mt-4 mb-2">
                 <h1>Berita</h1>
             </div>
-            <div class="row g-4">
-                @foreach ($posts as $post)
-                    <x-blog-card category="{{ $post->category->name }}" title="{{ $post->title }}" image="{{ $post->image }}" urlcategory="{{ $post->slug }}" urlpost="{{ $post->slug }}" date="{{ $post->created_at->diffForHumans() }}" user="{{ $post->user->name }}"></x-blog-card>
-                @endforeach
+            @forelse ($posts as $post)
+                <div class="row g-4">
+                    <x-blog-card category="{{ $post->category->name }}" title="{{ $post->title }}"
+                        image="{{ $post->image }}" urlcategory="{{ $post->slug }}" urlpost="{{ $post->slug }}"
+                        date="{{ $post->created_at->diffForHumans() }}" user="{{ $post->user->name }}"></x-blog-card>
+                </div>
+            @empty
+            <div class="row">
+                <p>Belum ada Berita</p>
             </div>
+            @endforelse
         </div>
     </section>
 @endsection
